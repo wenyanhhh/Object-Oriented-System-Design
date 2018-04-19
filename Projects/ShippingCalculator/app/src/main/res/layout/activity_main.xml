@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.stanford.cs108.shippingcalculator.MainActivity">
+
+    <TextView
+        android:id="@+id/intro_id"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="@string/intro"
+        android:textAlignment="textStart" />
+
+    <EditText
+        android:id="@+id/weight_id"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/intro_id"
+        android:inputType="numberDecimal"
+        android:text="@string/empty" />
+
+    <RadioButton
+        android:id="@+id/next_day_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/intro_id"
+        android:checked="true"
+        android:text="@string/nextday"
+        android:onClick="onClickRadioButton"/>
+
+    <RadioButton
+        android:id="@+id/second_day_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/next_day_id"
+        android:text="@string/secondday"
+        android:onClick="onClickRadioButton"/>
+
+    <RadioButton
+        android:id="@+id/standard_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/second_day_id"
+        android:text="@string/standard"
+        android:onClick="onClickRadioButton"/>
+
+    <CheckBox
+        android:id="@+id/insurance_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:layout_below="@+id/standard_id"
+        android:text="@string/insurance" />
+
+    <TextView
+        android:id="@+id/cost_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/insurance_id"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:text="@string/tbd" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/insurance_id"
+        android:layout_alignParentRight="true"
+        android:text="@string/calculate"
+        android:onClick="onClickCalculate"/>
+
+</RelativeLayout>

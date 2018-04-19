@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.stanford.cs108.colorpicker.MainActivity">
+
+    <TextView
+        android:id="@+id/color_id"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/empty"
+        android:background="#000000"/>
+
+    <TextView
+        android:id="@+id/rgb_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/color_id"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20sp"
+        android:text="@string/original" />
+
+    <TextView
+        android:id="@+id/red_id"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rgb_id"
+        android:text="@string/red" />
+
+    <TextView
+        android:id="@+id/green_id"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/red_id"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/green" />
+
+    <TextView
+        android:id="@+id/blue_id"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/green_id"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/blue" />
+
+    <SeekBar
+        android:id="@+id/seekBar_red_id"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/rgb_id"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@+id/red_id"
+        android:layout_toRightOf="@+id/red_id"
+        android:max="255"/>
+
+    <SeekBar
+        android:id="@+id/seekBar_green_id"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/seekBar_red_id"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@+id/green_id"
+        android:layout_toRightOf="@+id/green_id"
+        android:max="255"/>
+
+    <SeekBar
+        android:id="@+id/seekBar_blue_id"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/green_id"
+        android:layout_toEndOf="@+id/green_id"
+        android:layout_toRightOf="@+id/green_id"
+        android:max="255"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/changecolor"
+        android:onClick="onClickChangeColor" />
+
+</RelativeLayout>
