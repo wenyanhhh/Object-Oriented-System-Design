@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="5dp"
+    android:paddingLeft="5dp"
+    android:orientation="vertical"
+    tools:context="edu.stanford.cs108.cities.SecondActivity">
+
+    <GridLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:columnCount="2"
+        android:rowCount="3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:layout_column="0"
+            android:layout_row="0" />
+
+        <EditText
+            android:id="@+id/name_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continent"
+            android:layout_column="0"
+            android:layout_row="1" />
+
+        <EditText
+            android:id="@+id/continent_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Population"
+            android:layout_column="0"
+            android:layout_row="2"
+            />
+
+        <EditText
+            android:id="@+id/population_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:inputType="number"/>
+
+    </GridLayout>
+
+    <RadioGroup
+        android:id="@+id/populationChoice_group"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:checkedButton = "@+id/greater"
+        android:layout_gravity="center_horizontal">
+
+        <RadioButton
+            android:id="@id/greater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Greater or Equal" />
+
+        <RadioButton
+            android:id="@+id/less"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Less Than"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/search_Btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SEARCH"
+        android:layout_gravity="fill_horizontal"
+        android:gravity="center"/>
+
+    <ListView
+        android:id="@+id/search_Output"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
+
+
+
+</LinearLayout>
